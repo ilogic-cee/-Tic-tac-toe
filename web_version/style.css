@@ -1,0 +1,144 @@
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f06, #4a90e2);
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Table styles */
+#tab-tic-tac-toe {
+    margin: 100px auto 30px;
+    border-collapse: collapse;
+    width: 320px;
+    height: 320px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    animation: pop-in 0.5s ease-out;
+}
+
+#tab-tic-tac-toe td {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #4a90e2;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 2.5em;
+    transition: background-color 0.3s, transform 0.2s;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+#tab-tic-tac-toe td:hover {
+    background-color: #e6f0ff;
+    transform: scale(1.05);
+}
+
+#tab-tic-tac-toe td::before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+}
+
+#tab-tic-tac-toe td > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Button styles */
+#bnt-restart {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#bnt-restart:hover {
+    background-color: #357abd;
+    transform: scale(1.05);
+}
+
+#bnt-restart:active {
+    background-color: #2a6c9f;
+}
+
+#bnt-restart:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Message styles */
+#message {
+    font-size: 1.5em;
+    margin: 10px;
+    color: #fff;
+    text-align: center;
+}
+
+/* Keyframes for animations */
+@keyframes pop-in {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

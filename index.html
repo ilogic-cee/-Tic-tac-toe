@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="IlogicCeeJr" name="author">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="web_version/style.css">
+    <script type="text/javascript" src="web_version/script.js" defer></script>
+    <title>IlogicJr - Minimax Tic-Tac-Toe</title>
+</head>
+<body>
+    <header>
+        <h1>IlogicJr Algorithm - Tic-Tac-Toe</h1>
+    </header>
+    <main>
+        <p id="message">Start the game!</p>
+        <table id="tab-tic-tac-toe" cellspacing="0">
+            <tr>
+                <td id="00" onclick="clickedCell(this)"><div></div></td>
+                <td id="01" onclick="clickedCell(this)"><div></div></td>
+                <td id="02" onclick="clickedCell(this)"><div></div></td>
+            </tr>
+            <tr>
+                <td id="10" onclick="clickedCell(this)"><div></div></td>
+                <td id="11" onclick="clickedCell(this)"><div></div></td>
+                <td id="12" onclick="clickedCell(this)"><div></div></td>
+            </tr>
+            <tr>
+                <td id="20" onclick="clickedCell(this)"><div></div></td>
+                <td id="21" onclick="clickedCell(this)"><div></div></td>
+                <td id="22" onclick="clickedCell(this)"><div></div></td>
+            </tr>
+        </table>
+        <button id="bnt-restart" onclick="restartBnt(this)">Start AI</button>
+    </main>
+    <footer>
+        <p>Read more on: <a href="#">IlogicJr Newsfeed</a></p>
+    </footer>
+</body>
+</html>
